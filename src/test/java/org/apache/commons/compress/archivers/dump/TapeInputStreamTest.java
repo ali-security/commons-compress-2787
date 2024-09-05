@@ -23,11 +23,11 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
-import org.apache.commons.compress.AbstractTest;
+import org.apache.commons.compress.AbstractTestCase;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-public class TapeInputStreamTest extends AbstractTest {
+public class TapeInputStreamTest extends AbstractTestCase {
     @ParameterizedTest
     @ValueSource(ints = {-1, 0, Integer.MAX_VALUE / 1000, Integer.MAX_VALUE})
     public void testResetBlockSizeWithInvalidValues(final int recsPerBlock) throws Exception {
